@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/1999/xhtml" class="transition_support"><head>
+    <meta content="application/xhtml+xml; charset=utf-8" http-equiv="Content-Type">
+    <meta content="chrome=1" http-equiv="X-UA-Compatible">
+
+    <title>webdev.stephband.info - jQuery Skin</title>
+    <link href="http://assets.stephband.info/css/webcss.css" media="all" rel="stylesheet" type="text/css">
+    <link href="http://assets.stephband.info/css/site.layout.css" media="all" rel="stylesheet" type="text/css">
+    <link href="http://assets.stephband.info/css/site.typography.css" media="all" rel="stylesheet" type="text/css">
+    
+    <style>
+      body{
+      	padding-top: 170px;
+        padding-bottom: 3em;
+      }
+      
+      .site_wrap {
+        margin-bottom: 1em;
+      }
+      
+      input {
+      	background-color: #cccccc;				.bind('mousewheel DOMMouseScroll', function(e){
+					var delta = limit(-15, 15, e.wheelDelta !== undefined ? e.wheelDelta / 120 : -e.detail / 3 );
+					
+					colorAngle = wraparound(0, 360, colorAngle + delta);
+					
+					controller.makeHues( colorAngle, function( values ){
+						view.updateValues( uiRadios, uiSwatches, hslColors, values );
+					});
+					
+					e.preventDefault();
+				});      }
+      
+      /*.chooser {
+      	overflow: auto;
+      }*/
+      
+      .custom {
+      	opacity: 0;
+      	position: absolute;
+      	left: -10000%;
+      }
+      
+      .swatch {
+        width: 16px;
+        height: 16px;
+        padding-top: 16px;
+        overflow: hidden;
+        display: inline-block;
+      }
+    </style>
+</head>
+    
+<body>
+
+	<div class="site_wrap wrap">
+		<input class="color_input" type="text" data-type="csscolor" />
+	</div>
+
+	<header class="site_header_panel header_panel panel" id="page_header">
+	  <div class="site_header_wrap header_wrap wrap">
+	    <a href="http://stephband.info" title="stephband" rel="index"><h1 class="site_logo_thumb logo_thumb thumb">stephband.info</h1></a>
+	    
+	    <ul class="horizontal site_nav_index nav_index index">
+	      <li><a href="http://stephband.info" class="nav_tab_button tab_button button">blog</a></li><li><a href="http://webdev.stephband.info" class="nav_tab_button tab_button button">webdev</a></li><li><a href="http://twitter.com/stephband" class="twitter_button button" rel="external">Twitter</a></li>
+	    </ul>
+	  </div>
+	</header>
+	
+	<!-- scripts -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript"></script>
+	<script src="js/Color.js" type="text/javascript"></script>
+	<script>
+
+	</script>
+</body>
+</html>
