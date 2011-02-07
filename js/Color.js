@@ -151,6 +151,9 @@
 //		},
 		
 		hexString: function(){
+			if ( this.r === undefined || this.g === undefined || this.b === undefined ) {
+				calcRgb( this );
+			}
 			return ['#', toHex(this.r), toHex(this.g), toHex(this.b)].join('');
 		}
 	};
